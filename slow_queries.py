@@ -215,7 +215,6 @@ def csv_read(file_name, temp):
 # SQLAlchemy simple example
 def simple_query(query):
    dbpass=getpass.getpass("DB Password: ")
-#   engine = sqlalchemy.create_engine("mysql+pymysql://sandbox:"+dbpass+"@195.54.47.34/network_generator")
    engine = sqlalchemy.create_engine("mysql+pymysql://root:"+dbpass+"@localhost/sza?unix_socket=/var/run/mysqld/mysqld.sock")
 #   engine = create_engine(dialect+driver://username:password@host:port/database)
    connection = engine.connect()
